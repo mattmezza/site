@@ -26,7 +26,7 @@ export default () => (
           items={shuffle([
             ' Entrepreneur',
             ' Coder',
-            ' Manager',
+            ' Singer',
             ' Engineer',
             ' Mentor'
           ])}
