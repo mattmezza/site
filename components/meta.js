@@ -3,7 +3,7 @@ import Head from 'next/head'
 import moment from 'moment'
 
 // Other
-import posts from '../data/essays'
+import posts from '../data/thoughts'
 
 // Components
 import Title from './title'
@@ -24,12 +24,12 @@ export default ({ id, hasCover }) => {
   let coverURL
 
   if (hasCover) {
-    coverURL = `/static/essays/${date.format('YYYY')}/${id}/cover.png`
+    coverURL = `/static/thoughts/${date.format('YYYY')}/${id}/cover.png`
   }
 
   return (
     <aside>
-      <Back to="/essays" outsideCover={hasCover} />
+      <Back to="/thoughts" outsideCover={hasCover} />
 
       {hasCover && <Image src={coverURL} isCover />}
       <Title value={post.title} />

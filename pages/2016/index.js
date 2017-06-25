@@ -1,4 +1,4 @@
 // Helpers
 import redirect from '../../components/redirect'
 
-export default redirect('/essays')
+export default redirect('/thoughts')

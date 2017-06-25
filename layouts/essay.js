@@ -13,7 +13,7 @@ export default ({ children }) => (
         margin: 0 auto;
         word-wrap: break-word;
         hyphens: auto;
-        max-width: 620px;
+        max-width: 768px;
       }
     `}
     </style>

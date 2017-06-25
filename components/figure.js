@@ -46,7 +46,7 @@ const Image = ({ width, src, isCover, isWindow }) => (
   <figure className={getClasses(isCover, isWindow)}>
     <img width={width} src={src} />
 
-    {isCover && <Back to="/essays" insideCover />}
+    {isCover && <Back to="/thoughts" insideCover />}
 
     <style jsx>
       {`
@@ -89,7 +89,7 @@ const Image = ({ width, src, isCover, isWindow }) => (
 
       @media (min-width: 768px) {
         figure {
-          margin: 40px 0;
+          margin: 30px 0;
         }
 
         .frame {

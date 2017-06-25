@@ -1,10 +1,9 @@
 // Components
 import Head from 'next/head'
-
-const suffix = 'Leo Lamprecht'
+import general from '../data/general'
 
 export default ({ value }) => (
   <Head>
-    <title>{value ? `${value} — ${suffix}` : suffix}</title>
+    <title>{value ? `${value} — ${general.suffix}` : general.suffix}</title>
   </Head>
 )

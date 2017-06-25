@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Router from 'next/router'
 
 // Other
-import { version } from '../package'
+import package_ from '../package'
 
 let progress
 
@@ -28,8 +28,8 @@ Router.onRouteChangeError = stopProgress
 // Showing the version and GitHub repository
 if (global.document) {
   const info = [
-    `Version: ${version}`,
-    `Find the code here: https://github.com/leo/site`,
+    `Version: ${package_.version}`,
+    `Find the code here: https://github.com/${package_.repository}`,
     `Have a great day! :)`
   ]
 
@@ -45,40 +45,39 @@ const viewSource = event => {
     return
   }
 
-  document.location = 'https://github.com/leo/site'
+  document.location = `https://github.com/${package_.repository}`
   event.preventDefault()
 }
 
 export default ({ children }) => (
   <main onDoubleClick={viewSource}>
     <Head>
-      <link
-        rel="mask-icon"
-        href="http://leo.im/static/lightning.svg"
-        color="#000000"
-      />
+      <link rel="mask-icon" href="/static/curly-brackets.svg" color="#000000" />
       <link rel="apple-touch-icon" href="/static/touch-icon.png" />
       <link rel="icon" href="/static/touch-icon.png" type="image/png" />
-
+      <link
+        rel="stylesheet"
+        href="/static/font-awesome/css/font-awesome.min.css"
+      />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, user-scalable=no"
       />
       <meta
         name="description"
-        content="A teenagers view on web development and intuitive UI design."
+        content="A thought or two about software and development."
       />
-      <meta name="twitter:site" content="@notquiteleo" />
+      <meta name="twitter:site" content={`@_mattmezza_`} />
     </Head>
 
     {children}
 
     <style jsx global>
       {`
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
       body {
-        font-family: -apple-system, BlinkMacSystemFont,
-        Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
         margin: 0;
         -webkit-font-smoothing: antialiased;
       }
