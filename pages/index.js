@@ -82,7 +82,7 @@ export default () => (
       }
       section h1 {
         font-size: 57px;
-        left: 35px;
+        right: 35px;
         top: 65px;
         font-weight: 400;
         margin: 0;
@@ -98,7 +98,7 @@ export default () => (
 
       section h2 {
         font-size: 20px;
-        left: 35px;
+        right: 35px;
         top: 35px;
         font-weight: 200;
         margin: 0;
