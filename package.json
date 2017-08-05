@@ -46,6 +46,7 @@
     "prop-types": "15.5.10",
     "react": "15.5.4",
     "react-codepen": "0.1.0",
+    "react-disqus-comments": "1.0.3",
     "react-dom": "15.5.4",
     "react-fontawesome": "1.6.1",
     "react-rotating-text": "1.2.0",

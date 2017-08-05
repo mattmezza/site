@@ -70,6 +70,8 @@ export default ({ children }) => (
       <meta name="twitter:site" content={`@_mattmezza_`} />
     </Head>
 
+    <script src="/static/ga.js" />
+
     {children}
 
     <style jsx global>
