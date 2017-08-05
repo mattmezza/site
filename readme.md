@@ -1,11 +1,7 @@
-# leo.im
+# matteo.merola.co
 
-[![Build Status](https://travis-ci.org/leo/site.svg?branch=master)](https://travis-ci.org/leo/site)
+[![Build Status](https://travis-ci.org/mattmezza/site.svg?branch=master)](https://travis-ci.org/mattmezza/site)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
-
-Where the magic happens! 🎩
-
-If you want to see the old version of the site, you can find it [here](https://github.com/leo/site/tree/1b1459efb09526c48e9cb7be06dc703321605333).
 
 ## Caught a Bug?
 
