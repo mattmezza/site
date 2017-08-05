@@ -70,7 +70,7 @@ export default ({ children }) => (
       <meta name="twitter:site" content={`@_mattmezza_`} />
     </Head>
 
-    <script src="/static/ga.js" />
+    <script src="/static/analytics.google" />
 
     {children}
 
