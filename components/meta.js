@@ -32,6 +32,7 @@ export default ({ id, hasCover }) => {
       <Back to="/thoughts" outsideCover={hasCover} />
 
       {hasCover && <Image src={coverURL} isCover />}
+      {hasCover && <link rel="image_src" href={coverURL} />}
       <Title value={post.title} />
 
       <h1 className={headingClass}>{post.title}</h1>
