@@ -52,6 +52,7 @@ const Image = ({ width, src, isCover, isWindow }) => (
       {`
       img {
         max-width: 100%;
+        border-radius: 50%;
       }
 
       figure {

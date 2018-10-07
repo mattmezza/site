@@ -16,7 +16,7 @@ export default () => (
 
     <section>
       <div id="image">
-        <Image src="/static/mattmezza.png" width={150} />
+        <Image src="/static/mattmezza-new.jpeg" width={150} />
       </div>
       <h2>{`Hi. I'm`}</h2>
       <h1>Matteo</h1>
@@ -41,7 +41,7 @@ export default () => (
       <a href={`https://twitter.com/_mattmezza_`}><FA name="twitter" /></a>
       <a href={`https://facebook.com/matteo.merola`}><FA name="facebook" /></a>
       <a href={`skype://matteomerola?call`}><FA name="skype" /></a>
-      <a href={`tel://+393409341277`}><FA name="phone" /></a>
+      <a href={`tel://+31653707491`}><FA name="phone" /></a>
       <a href={`https://telegram.me/mattmezza`}><FA name="telegram" /></a>
       <a href={`https://instagram.com/chiamamimatt`}><FA name="instagram" /></a>
       <a href={`https://linkedin.com/in/matteomerola`}>
