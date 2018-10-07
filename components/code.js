@@ -5,7 +5,7 @@ import SyntaxHighlighter, {
 
 // Helpers
 import { Component } from 'react'
-import { github } from 'react-syntax-highlighter/dist/styles'
+import { github } from 'react-syntax-highlighter/styles/hljs'
 
 const styles = {
   margin: '30px 0',
@@ -14,9 +14,11 @@ const styles = {
   width: '100%',
   boxSizing: 'border-box',
   wordWrap: 'normal',
-  fontSize: '1.04em',
+  fontSize: '14.4px',
+  lineHeight: '1.5em',
   WebkitOverflowScrolling: 'touch',
-  fontFamily: 'Menlo, Monaco, Lucida Console, Liberation Mono, Courier New, monospace, serif'
+  fontFamily:
+    'Menlo, Monaco, Lucida Console, Liberation Mono, Courier New, monospace, serif'
 }
 
 class Code extends Component {
@@ -49,16 +51,17 @@ const InlineCode = ({ children }) => (
 
     <style jsx>
       {`
-      code {
-        background: #f3f3f3;
-        padding: 2px 4px;
-        border-radius: 3px;
-        font-size: 0.85em;
-        color: #3a3a3a;
-        hyphens: none;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, Courier New, monospace, serif;
-      }
-    `}
+        code {
+          background: #f3f3f3;
+          padding: 2px 4px;
+          border-radius: 3px;
+          font-size: 0.85em;
+          color: #3a3a3a;
+          hyphens: none;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            Courier New, monospace, serif;
+        }
+      `}
     </style>
   </code>
 )

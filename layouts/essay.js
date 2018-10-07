@@ -10,19 +10,31 @@ export default ({ children }) => (
       <ReactDisqusComments
         shortname="matteo-merola-co"
         onNewComment={() =>
-          console.log(`I don't give a f**k about your comment...`)}
+          console.log(`I don't give a f**k about your comment...`)
+        }
       />
     </article>
 
     <style jsx>
       {`
-      article {
-        margin: 0 auto;
-        word-wrap: break-word;
-        hyphens: auto;
-        max-width: 768px;
-      }
-    `}
+        article {
+          margin: 0 auto;
+          word-wrap: break-word;
+          hyphens: auto;
+          max-width: 768px;
+        }
+      `}
+    </style>
+
+    <style jsx global>
+      {`
+        .tweet {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+        }
+      `}
     </style>
   </Page>
 )

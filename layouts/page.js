@@ -39,7 +39,7 @@ if (global.document) {
 }
 
 const viewSource = event => {
-  const allowed = ['P', 'H1', 'SPAN']
+  const allowed = ['P', 'SPAN', 'H1', 'H2', 'H3', 'PRE', 'CODE']
 
   if (allowed.includes(event.target.tagName)) {
     return
@@ -67,7 +67,8 @@ export default ({ children }) => (
         name="description"
         content="A thought or two about software and development."
       />
-      <meta name="twitter:site" content={`@_mattmezza_`} />
+      <meta name="twitter:site" content="@_mattmezza_" />
+      <meta name="twitter:creator" content="@_mattmezza_" />
     </Head>
 
     <script src="/static/analytics.google" />
@@ -128,10 +129,43 @@ export default ({ children }) => (
 
       @media (min-width: 768px) {
         main {
-          padding: 45px;
+          padding: 30px;
+          box-sizing: border-box;
+          position: relative;
+          min-height: 100%;
         }
-      }
-    `}
+
+        #nprogress {
+          pointer-events: none;
+        }
+
+        #nprogress .bar {
+          background: #4492ff;
+          position: fixed;
+          z-index: 1031;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+        }
+
+        #nprogress .peg {
+          display: block;
+          position: absolute;
+          right: 0px;
+          width: 100px;
+          height: 100%;
+          box-shadow: 0 0 10px #4492ff, 0 0 5px #4492ff;
+          opacity: 1.0;
+          transform: rotate(3deg) translate(0px, -4px);
+        }
+
+        @media (min-width: 768px) {
+          main {
+            padding: 45px;
+          }
+        }
+      `}
     </style>
   </main>
 )

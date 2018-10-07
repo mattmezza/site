@@ -1,8 +1,6 @@
 # dependencies
 node_modules
 
-# logs
-npm-debug.log
-
-# other
+# build output
 .next
+out

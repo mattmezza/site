@@ -1,12 +1,11 @@
-// Helpers
-import { createElement } from 'react'
+// Packages
 import toID from 'to-id'
 
-const H = ({ level, fontSize, linked, children }) => {
-  let idBase = children
+const Anchor = ({ content }) => {
+  let idBase = content
 
-  if (Array.isArray(children)) {
-    idBase = children
+  if (Array.isArray(content)) {
+    idBase = content
       .map(item => {
         if (typeof item === 'string') {
           return item
@@ -17,74 +16,152 @@ const H = ({ level, fontSize, linked, children }) => {
       .join('')
   }
 
+  const id = toID(idBase)
+
   return (
-    <div>
-      {createElement(
-        `h${level}`,
-        {
-          style: {
-            fontWeight: 700,
-            fontSize,
-            lineHeight: '1.5em'
-          }
-        },
-        linked &&
-          <span>
-            <a href={`#${toID(idBase)}`} id={toID(idBase)}>#</a>
-          </span>,
-        children
-      )}
+    <span>
+      <a href={`#${id}`} id={id}>
+        #
+      </a>
 
       <style jsx>
         {`
-        div {
-          margin-top: 30px;
-        }
+          span {
+            position: absolute;
+            margin-left: -15px;
+            width: 15px;
+          }
 
-        span {
-          position: absolute;
-          margin-left: -15px;
-          width: 15px;
-        }
-
-        a {
-          text-decoration: none;
-          color: #4492ff;
-          padding-top: 30px;
-        }
-
-        a:focus {
-          outline: none;
-        }
-
-        @media (min-width: 922px) {
           a {
+            text-decoration: none;
+            color: #4492ff;
+            padding-top: 30px;
             visibility: hidden;
           }
 
-          div:hover a,
-          span:hover a {
-            visibility: visible;
+          a:focus {
+            outline: none;
           }
-        }
-      `}
+        `}
       </style>
-    </div>
+    </span>
   )
 }
 
-for (let level = 1; level <= 6; level++) {
-  const tag = `H${level}`
+const Wrapper = ({ children }) => (
+  <div>
+    {children}
 
-  const sizes = [23, 18, 15, 13, 10, 9]
+    <style jsx>{`
+      div {
+        margin-top: 30px;
+      }
 
-  const component = props =>
-    new H({
-      ...props,
-      level,
-      fontSize: sizes[level - 1],
-      linked: level > 1
-    })
+      div:hover :global(a) {
+        visibility: visible;
+      }
+    `}</style>
+  </div>
+)
 
-  exports[tag] = component
-}
+export const H1 = ({ children }) => (
+  <Wrapper>
+    <h1>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h1 {
+          font-weight: 700;
+          font-size: 23px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h1>
+  </Wrapper>
+)
+
+export const H2 = ({ children }) => (
+  <Wrapper>
+    <h2>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h2 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h2>
+  </Wrapper>
+)
+
+export const H3 = ({ children }) => (
+  <Wrapper>
+    <h3>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h3 {
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h3>
+  </Wrapper>
+)
+
+export const H4 = ({ children }) => (
+  <Wrapper>
+    <h4>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h4 {
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h4>
+  </Wrapper>
+)
+
+export const H5 = ({ children }) => (
+  <Wrapper>
+    <h5>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h5 {
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h5>
+  </Wrapper>
+)
+
+export const H6 = ({ children }) => (
+  <Wrapper>
+    <h6>
+      <Anchor content={children} />
+      {children}
+
+      <style jsx>{`
+        h6 {
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 1.5em;
+        }
+      `}</style>
+    </h6>
+  </Wrapper>
+)
