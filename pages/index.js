@@ -41,9 +41,6 @@ export default () => (
       <a href={`https://twitter.com/_mattmezza_`}>
         <FA name="twitter" />
       </a>
-      <a href={`https://facebook.com/matteo.merola`}>
-        <FA name="facebook" />
-      </a>
       <a href={`skype://matteomerola?call`}>
         <FA name="skype" />
       </a>
